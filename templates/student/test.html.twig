@@ -1,0 +1,16 @@
+good morning{{ name }}
+<br>
+{{"your mail :" ~ mail }}
+{% set v="10" %}
+{{ v }}
+{% if(v==10) %}
+{{ 'valid' }}
+{% endif %}
+<br>
+{% set T=[1,2,3,4] %}
+{{   'array index 2 is :' ~T[2] }}
+
+{% set names=['mohamed','aymen','khiari'] %}
+{{ 'names index 1 is :'~names[1]|upper ~ names[2] | slice (0,3)}}
+
+

@@ -1,0 +1,33 @@
+<h1>list</h1>
+<a href="{{ path('addStudent') }}">Add student</a>
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>firstname</td>
+        <td>lastname</td>
+        <td>Age</td>
+        <td>edit</td>
+    </tr>
+    {% for student in listStudents %}
+
+        <tr>
+            <td>
+                {{ student.id }}
+            </td>
+            <td>
+                {{ student.firstName }}
+            </td>
+            <td>
+                {{ student.lastName }}
+            </td>
+            <td>
+                {{ student.age }}
+            </td>
+            <td>
+                <a href="{{ path('deleteStudent',{'id':student.id}) }}">delete</a>
+                <a href="{{ path('updateStudent',{'id':student.id}) }}">update</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>

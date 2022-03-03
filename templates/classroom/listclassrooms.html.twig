@@ -1,0 +1,25 @@
+<h1>list</h1>
+{# {{ dump(listclassrooms) }} #}
+<a href="{{ path('addclassroom') }}">Aadd classroom</a>
+<table>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>edit</td>
+    </tr>
+{% for classroom in listclassrooms %}
+
+    <tr>
+        <td>
+    {{ classroom.id }}
+        </td>
+        <td>
+    {{ classroom.name }}
+        </td>
+        <td>
+            <a href="{{ path('updateclassroom',{'id':classroom.id}) }}">update</a>
+            <a href="{{ path('deleteclassroom',{'id':classroom.id}) }}">delete</a>
+        </td>
+    </tr>
+{% endfor %}
+</table>
