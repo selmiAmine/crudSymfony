@@ -27,8 +27,8 @@ class StudentController extends AbstractController
     public function test(): Response
     {
         return $this->render('student/test.html.twig', [
-            'name' => 'aymen',
-            'mail'=>'khiari.aymen@esprit.tn'
+            'name' => 'hey',
+            'mail'=>'khiari.hey@esprit.tn'
         ]);
     }
     /**
